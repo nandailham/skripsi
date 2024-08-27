@@ -1,0 +1,134 @@
+.content-header {
+    padding: 0px 0.5rem;
+}
+.wire-loading {
+    position: fixed;
+    z-index: 1040;
+    top: 16px;
+    left: 50%;
+}
+
+.has-error .select2-selection {
+    border-color: #dc3545 !important;
+}
+
+.bg-orange, .bg-orange > a {
+    color: #fff !important;
+}
+.select2-container{
+    width: auto !important;
+}
+.nowrap {
+    white-space:nowrap !important;
+}
+input.white, textarea.white{ background: #ffffff !important}
+img.brand-image{
+    width: 32px !important;
+    height: 32px;
+}
+#mytable-tab {
+    display: block ruby;
+    overflow-y: hidden;
+    font-size: 14px;
+}
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    10% { opacity: 1; }
+    20% { opacity: 0;}
+    30% { opacity: 0;}
+
+}
+
+.incTbl {
+    counter-increment: rowNumber;
+}
+.incTbl .number:before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+/*modal image*/
+img.preview{
+    cursor: pointer;
+}
+/* The Modalprev (background) */
+.modalprev {
+display: none;  
+position: fixed;
+z-index: 9999;
+padding-top: 100px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.9);
+}
+
+/* Modalprev Content (Image) */
+.modalprev-content {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+}
+
+/* Caption of Modalprev Image (Image Text) - Same Width as the Image */
+#preview-img .caption {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: 150px;
+}
+
+/* Add Animation - Zoom in the Modalprev */
+.modalprev-content, .caption {
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+from {transform:scale(0)}
+to {transform:scale(1)}
+}
+
+/* The Close Button */
+#preview-img .close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+opacity: 1;
+}
+
+#preview-img .close:hover,
+#preview-img .close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+.modalprev-content {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 988px){
+    .wire-loading {
+        left: 50px;
+    }
+}
+/*end modal image*/
